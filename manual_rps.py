@@ -24,13 +24,11 @@ possible_choices = ["Rock", "Paper", "Scissors"]
 computer_choice = random.choice(possible_choices)
 
 def get_winner(computer_choice, user_choice):
-    if computer_choice == user_choice:
-       print("It is a tie!")
-
+    
 #1
-    elif computer_choice == "Scissors":
+    if computer_choice == "Scissors":
         if user_choice == "Rock":
-            print("You won")
+            print("You won!")
         else:
             print("You lost")
 
@@ -46,6 +44,8 @@ def get_winner(computer_choice, user_choice):
             print("You won")
         else:
             print("You lost")
+    elif computer_choice == user_choice:
+            print("It is a tie!")
 
 get_winner(computer_choice, user_choice)
 
