@@ -32,7 +32,7 @@ def get_winner(computer_choice, user_choice):
         if computer_choice == "scissors":
             print("you won")
         else:
-            print("Paper covers rock, You lost")
+            print(" You lost")
 
 #2
     elif user_choice == "paper":
