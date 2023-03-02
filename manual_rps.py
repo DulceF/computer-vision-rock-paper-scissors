@@ -28,26 +28,24 @@ def get_winner(computer_choice, user_choice):
        print("It is a tie!")
 
 #1
-    elif user_choice == "Rock":
-        if computer_choice == "Scissors":
+    elif computer_choice == "Scissors":
+        if user_choice == "Rock":
             print("You won")
         else:
-            print(" You lost")
+            print("You lost")
 
 #2
-    elif user_choice == "Paper":
-        if computer_choice == "Rock":
+    elif computer_choice == "Rock":
+        if user_choice == "Paper":
             print("You won")
         else:
             print("You lost")
  #3   
-    elif user_choice == "Scissors":
-        if computer_choice == "Paper":
+    elif computer_choice == "Paper":
+        if user_choice == "Scissors":
             print("You won")
         else:
             print("You lost")
-
-   
 
 get_winner(computer_choice, user_choice)
 
