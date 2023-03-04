@@ -21,7 +21,7 @@ get_computer_choice()
 
 -The user also needs to make choose one of the options available, thus it will be asked to make a choice and the answer will then be stored in a variable for later use.. This task will also be stored in a function:
 def get_user_choice():
-    get_user_choice = input("What is your choice?: (rock,paper or scissors) ")
+    get_user_choice = input("What is your choice?: (rock,paper or scissors) ")  
     print(get_user_choice)
 get_user_choice()
 
