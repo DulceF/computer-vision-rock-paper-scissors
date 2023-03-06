@@ -47,6 +47,6 @@ get_winner(computer_choice, user_choice)
 
 #Task 3 Create a function to simulate the game
 
-#def play(get_computer_choice, get_user_choice, get_winner):
+def play(get_computer_choice, get_user_choice, get_winner):
 
-#  play(get_computer_choice, get_user_choice, get_winner)
+    play(get_computer_choice, get_user_choice, get_winner)
