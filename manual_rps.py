@@ -26,7 +26,7 @@ computer_choice = random.choice(possible_choices)
 def get_winner(computer_choice, user_choice):
      
     if computer_choice == user_choice:
-        print('It is a tie!') 
+        print('It is a tie!')
 
     elif computer_choice == "Rock":
         if user_choice == "Scissors":
