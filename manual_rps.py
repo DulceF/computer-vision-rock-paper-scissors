@@ -36,11 +36,11 @@ def get_winner(computer_choice, user_choice):
             print("You lost!")
 
 #2
-    elif computer_choice == "Rock":
-        if user_choice == "Paper":
-            print("You won!")
-        else:
-            print("You lost!")
+   # elif computer_choice == "Rock":
+       # if user_choice == "Paper":
+         #   print("You won!")
+        #else:
+            #print("You lost!")
  #3   
     elif computer_choice == "Paper":
         if user_choice == "Scissors":
