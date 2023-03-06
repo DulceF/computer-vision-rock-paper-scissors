@@ -25,26 +25,27 @@ computer_choice = random.choice(possible_choices)
 
 def get_winner(computer_choice, user_choice):
      
-    if  computer_choice == user_choice:
-            print("It is a tie!")
+    if computer_choice == user_choice:
+            print("It is a tie")
 
-    elif computer_choice == "Scissors" and user_choice == "Rock":
-        print("You won")
-    else:
-        print("You lost")
-    
-    if computer_choice == "Rock" and user_choice == "Paper":
-        print("You won")
-    else:
-        print("You lost")
+    elif    computer_choice == "Scissors":
+        if user_choice == "Rock":
+            print("You won")
+        else:
+            print("You lost")
+
+    elif computer_choice == "Rock":
+        if user_choice == "Paper":
+            print("You won")
+        else:
+            print("You lost")
    
-    if computer_choice == "Paper" and user_choice == "Scissors":
-        print("You won")
-    else:
-        print("You lost")
+    elif computer_choice == "Paper":
+        if user_choice == "Scissors":
+            print("You won")
+        else:
+            print("You lost")
    
-
-
 get_winner(computer_choice, user_choice)
 
 #Task 3 Create a function to simulate the game
