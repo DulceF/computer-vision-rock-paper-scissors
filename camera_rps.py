@@ -1,14 +1,5 @@
 #1 Computer choice
 
-def get_user_choice():
-    user_choice = input("What is your choice?: (Rock,Paper or Scissors): ")
-    return user_choice
-get_user_choice()
-
-import time
-seconds = time.time()
-print("You choose {user_choice}", seconds)
-
 import random
 def get_computer_choice():
     
@@ -49,10 +40,15 @@ cap.release()
 cv2.destroyAllWindows()
 get_prediction()
 
+#3 Countdown
+
+import time
+seconds = time.time()
+print("You choose {user_choice}", seconds)
 def get_winner(computer_choice, user_choice):
  
-#3 Figure out who won
-#3.1
+#4 Figure out who won
+#4.1
     if computer_choice == user_choice:
             print("It is a tie!")
 
@@ -62,13 +58,13 @@ def get_winner(computer_choice, user_choice):
         else:
             print("You lost!")
 
-#3.2
+#4.2
     elif computer_choice == "Rock":
         if user_choice == "Paper":
             print("You won!")
         else:
             print("You lost!")
- #3.3   
+ #4.3   
     elif computer_choice == "Paper":
         if user_choice == "Scissors":
             print("You won!")
@@ -78,7 +74,7 @@ def get_winner(computer_choice, user_choice):
 
     get_winner(computer_choice, user_choice)
 
-#4. Create a function to simulate the game
+#5. Create a function to simulate the game
 
 def play(get_computer_choice, get_user_choice, get_winner):
 
