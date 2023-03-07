@@ -1,6 +1,15 @@
 #1 Computer choice
-import random
 
+def get_user_choice():
+    user_choice = input("What is your choice?: (Rock,Paper or Scissors): ")
+    return user_choice
+get_user_choice()
+
+import time
+seconds = time.time()
+print("You choose {user_choice}", seconds)
+
+import random
 def get_computer_choice():
     
     possible_choices = ["Rock", "Paper", "Scissors"]
