@@ -45,37 +45,50 @@ get_prediction()
 import time
 seconds = time.time()
 print("You choose {user_choice}", seconds)
-def get_winner(computer_choice, user_choice):
+
  
 #4 Figure out who won
 #4.1
-    if computer_choice == user_choice:
+def get_winner(computer_choice, user_choice):
+    while True:  
+        if computer_choice == user_choice:
             print("It is a tie!")
 
-    elif computer_choice == "Scissors":
-        if user_choice == "Rock":
-            print("You won!")
-        else:
-            print("You lost!")
-
-#4.2
-    elif computer_choice == "Rock":
-        if user_choice == "Paper":
-            print("You won!")
-        else:
-            print("You lost!")
+        elif computer_choice == "Scissors":
+            if user_choice == "Rock":
+                print("You won!")
+            else:
+                print("You lost!")
+#4.2        
+        elif computer_choice == "Rock":
+            if user_choice == "Paper":
+                print("You won!")
+            else:
+                print("You lost!")
  #4.3   
-    elif computer_choice == "Paper":
-        if user_choice == "Scissors":
-            print("You won!")
-        else:
-            print("You lost!")
+        elif computer_choice == "Paper":
+            if user_choice == "Scissors":
+                print("You won!")
+            else:
+                print("You lost!")
    
+        get_winner(computer_choice, user_choice)
+    
 
-    get_winner(computer_choice, user_choice)
-
-#5. Create a function to simulate the game
+#6. Create a function to simulate the game
 
 def play(get_computer_choice, get_user_choice, get_winner):
-
     play(get_computer_choice, get_user_choice, get_winner)
+
+computer_wins = "You lost" 
+user_wins = "You won"
+
+def rounds_played(computer_wins, user_wins):
+    
+    if computer_wins == 3:
+        print("The game is over, you lost!")
+    else:
+        user_wins == 3
+        print("The game is over, you won")
+
+rounds_played(computer_wins, user_wins)
