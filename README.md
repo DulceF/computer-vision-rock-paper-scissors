@@ -4,15 +4,16 @@ In this project I am building a "rock, paper, scissors" game. This is a hand gam
 •	Rock smashes scissors.
 •	Paper covers rock.
 •	Scissors cut paper.
-The project will be created using python and an image model.
-Python:
+
+The project will be created using python functions and later an image model.
+
+# First part of the project
 -	To arbitrary generate the computer’s choices, I imported the random module:
 import random
 
 For simplicity, this task and the following will be stored in a function that can be called when necessary.
 def get_computer_choice():
 
-# Computer choice
 The computer will randomly choose one of the options:
  possible_choices = ["rock", "paper", "scissors"]
     computer_choice = random.choice(possible_choices)
