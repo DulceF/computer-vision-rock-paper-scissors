@@ -1,4 +1,5 @@
 # Rock Paper Scissors Game
+
 In this project I am building a "rock, paper, scissors" game. This is a hand game for two or more players. Participants say “rock, paper, scissors” and then simultaneously form their hands into the shape of a rock (a fist), a piece of paper (the palm of a hand, or a pair of scissors (two fingers extended). The rules are the following:
 •	Rock smashes scissors.
 •	Paper covers rock.
@@ -11,6 +12,7 @@ import random
 For simplicity, this task and the following will be stored in a function that can be called when necessary.
 def get_computer_choice():
 
+# Computer choice
 The computer will randomly choose one of the options:
  possible_choices = ["rock", "paper", "scissors"]
     computer_choice = random.choice(possible_choices)
@@ -19,13 +21,15 @@ The computer will randomly choose one of the options:
 Now, whenever necessary, I can call the function created to perform the task I need, in this case; randomly choose one of the options available:
 get_computer_choice()
 
+# User choice
 -The user also needs to make choose one of the options available, thus it will be asked to make a choice and the answer will then be stored in a variable for later use.. This task will also be stored in a function:
 def get_user_choice():
     get_user_choice = input("What is your choice?: (rock,paper or scissors) ")  
     print(get_user_choice)
 get_user_choice()
 
--Determine a winner
+# Determine a winner
+
 Now that both players have made their choice, it must be decided who wins. This task will be stored in a function with two arguments, “computer choice” and “user choice”:
 def get_winner(computer_choice, user_choice):
 Using an if, elif, else block we will compare the player’s choices and determine a winner. If both the user and the computer choose the same option it will be a tie. 
@@ -58,11 +62,11 @@ elif user_choice == "paper":
 Whenever necessary, we can call the function to play the game:
 get_winner(computer_choice, user_choice)
 
-
+# Image model
 In the second part of the project, the user_choice was replaced by the image model.
 Image model: I this case we will be using an image model. An image model stores information about an image such as class, type, range, width, etc.. I took pictures representing each game option – fist for rock, the palm of the hand for paper and two fingers extended for scissors. The computer was later trained to identify these images.
 
-#2 User choice
+# 2 User choice
 
 import cv2
 from keras.models import load_model
@@ -87,12 +91,13 @@ def get_prediction():
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
             
-# After the loop release the cap object
+#After the loop release the cap object
 cap.release()
-# Destroy all the windows
+#Destroy all the windows
 cv2.destroyAllWindows()
 get_prediction()
 
+# Countdown
 Because the game is played regularly, I added a countdown to zero in which at the point the player should show their hands to the camera:
 
 import time
