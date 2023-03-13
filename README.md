@@ -15,6 +15,12 @@ import random
 
 For simplicity, this task and the following will be stored in a function that can be called when necessary.
 def get_computer_choice():
+    
+    possible_choices = ["Rock", "Paper", "Scissors"]
+    computer_choice = random.choice(possible_choices)
+    return computer_choice
+
+get_computer_choice()
 
 The computer will randomly choose one of the options:
  possible_choices = ["rock", "paper", "scissors"]
@@ -122,13 +128,6 @@ get_prediction()
 # Determine a winner
 The code is the same used in the first part of the project.
 
-##########################
-import random
 
-def get_computer_choice():
-    
-    possible_choices = ["Rock", "Paper", "Scissors"]
-    computer_choice = random.choice(possible_choices)
-    return computer_choice
 
 
