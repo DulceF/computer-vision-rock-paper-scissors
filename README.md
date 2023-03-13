@@ -66,7 +66,7 @@ get_winner(computer_choice, user_choice)
 In the second part of the project, the user_choice was replaced by the image model.
 Image model: I this case we will be using an image model. An image model stores information about an image such as class, type, range, width, etc.. I took pictures representing each game option – fist for rock, the palm of the hand for paper and two fingers extended for scissors. The computer was later trained to identify these images.
 
-# 2 User choice
+-User choice
 
 import cv2
 from keras.models import load_model
@@ -97,7 +97,7 @@ cap.release()
 cv2.destroyAllWindows()
 get_prediction()
 
-# Countdown
+-Countdown
 Because the game is played regularly, I added a countdown to zero in which at the point the player should show their hands to the camera:
 
 import time
