@@ -9,7 +9,7 @@ The project will be created using python functions and later on using Keras imag
 
 # 1.Building the project with python functions
 
-# 1.1 Computer choice
+# 1.1 Computer's choice
 To arbitrary generate the computer’s choices, I imported the random module:
         import random
 
@@ -25,7 +25,7 @@ For simplicity, this task and the following will be stored in a function that ca
 Now, whenever necessary, I can call the function created to perform the task I need, in this case; randomly choose one of the options available:
          get_computer_choice()
 
-# 1.2 User choice
+# 1.2 User's choice
 -The user also needs to make choose one of the options available, thus it will be asked to make a choice and the answer will then be stored in a variable for later use.. This task will also be stored in a function:
         def get_user_choice():
             get_user_choice = input("What is your choice?: (rock,paper or scissors) ")  
@@ -73,11 +73,11 @@ Whenever necessary, we can call the function to play the game:
                         
                         get_winner(computer_choice, user_choice)
 
-# Alternative way or building the project - Image model
+# 2. Alternative way or building the project - Image model
 
 Image model: I this case we will be using an image model. An image model stores information about an image such as class, type, range, width, etc.. I took pictures representing each game option – fist for rock, the palm of my hand for paper and two fingers extended to represent scissors. The computer was later trained to identify these images and the user_choice was replaced by the output the computer provided after being trained.
 
-# Computer choice
+# 2.1 Computer choice
 The code for computer_choice remains the same as in the first part of the project:
 
                         import random
@@ -89,13 +89,13 @@ The code for computer_choice remains the same as in the first part of the projec
 
                         get_computer_choice()
 
-# Countdown
+# 2.2 Countdown
 Because the game is played regularly, I added a countdown to zero in which at the point the player should show their hands to the camera:
 
                         import time
                         seconds = time.time()
                         print("You choose {user_choice}", seconds)
-# User choice
+# 2.3 User choice
 The code for the user_choice was provided by the computer: 
 
                 import cv2
@@ -127,7 +127,7 @@ The code for the user_choice was provided by the computer:
         cv2.destroyAllWindows()
         get_prediction()
 
-# Determine a winner
+# 2.4 Determine a winner
 The code is the same used in the first part of the project.
 
 
