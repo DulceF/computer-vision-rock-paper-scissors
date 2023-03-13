@@ -122,7 +122,13 @@ get_prediction()
 # Determine a winner
 The code is the same used in the first part of the project.
 
+##########################
+import random
 
-
+def get_computer_choice():
+    
+    possible_choices = ["Rock", "Paper", "Scissors"]
+    computer_choice = random.choice(possible_choices)
+    return computer_choice
 
 
