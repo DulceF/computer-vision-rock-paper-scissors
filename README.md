@@ -128,7 +128,7 @@ The code for the user_choice was provided by the computer:
         get_prediction()
 
 # 2.4 Determine a winner
-The code is the same used in the first part of the project.
+The code is the same used in the first part of the project (1.3).
 
 
 
