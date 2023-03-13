@@ -120,7 +120,7 @@ cv2.destroyAllWindows()
 get_prediction()
 
 # Determine a winner
-The code is the same used in the first part of the project
+The code is the same used in the first part of the project.
 
 
 
