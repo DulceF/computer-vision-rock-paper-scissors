@@ -58,6 +58,46 @@ elif user_choice == "paper":
 Whenever necessary, we can call the function to play the game:
 get_winner(computer_choice, user_choice)
 
-Image model:
-I this case we will be using an image model. An image model stores information about an image such as class, type, range, width, etc.. I took pictures representing each game option and divided them in classes which the computer then got trained to identify. 
+
+In the second part of the project, the user_choice was replaced by the image model.
+Image model: I this case we will be using an image model. An image model stores information about an image such as class, type, range, width, etc.. I took pictures representing each game option – fist for rock, the palm of the hand for paper and two fingers extended for scissors. The computer was later trained to identify these images.
+
+#2 User choice
+
+import cv2
+from keras.models import load_model
+    
+import numpy as np
+model = load_model('keras_model.h5')
+cap = cv2.VideoCapture(0)
+data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+
+def get_prediction():  
+
+    while True: 
+        ret, frame = cap.read()
+        resized_frame = cv2.resize(frame, (224, 224), interpolation = cv2.INTER_AREA)
+        image_np = np.array(resized_frame)
+        normalized_image = (image_np.astype(np.float32) / 127.0) - 1 # Normalize the image
+        data[0] = normalized_image
+        prediction = model.predict(data)
+        cv2.imshow('frame', frame)
+        # Press q to close the window
+        print(prediction)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+            
+# After the loop release the cap object
+cap.release()
+# Destroy all the windows
+cv2.destroyAllWindows()
+get_prediction()
+
+Because the game is played regularly, I added a countdown to zero in which at the point the player should show their hands to the camera:
+
+import time
+seconds = time.time()
+print("You choose {user_choice}", seconds)
+
+
 
