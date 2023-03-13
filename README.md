@@ -10,41 +10,36 @@ The project will be created using python functions and later on using Keras imag
 # Building the project with python functions
 
 # Computer choice
-    #To arbitrary generate the computer’s choices, I imported the random module:
+To arbitrary generate the computer’s choices, I imported the random module:
         import random
 
 For simplicity, this task and the following will be stored in a function that can be called when necessary.
 
         def get_computer_choice():
+        #The computer will randomly choose one of the following options
              possible_choices = ["Rock", "Paper", "Scissors"]
              computer_choice = random.choice(possible_choices)
-             return computer_choice
+             print (computer_choice)
         get_computer_choice()
 
-
-
-The computer will randomly choose one of the options:
- possible_choices = ["rock", "paper", "scissors"]
-    computer_choice = random.choice(possible_choices)
-    print(computer_choice)
-
 Now, whenever necessary, I can call the function created to perform the task I need, in this case; randomly choose one of the options available:
-get_computer_choice()
+        get_computer_choice()
 
 # User choice
 -The user also needs to make choose one of the options available, thus it will be asked to make a choice and the answer will then be stored in a variable for later use.. This task will also be stored in a function:
-def get_user_choice():
-    get_user_choice = input("What is your choice?: (rock,paper or scissors) ")  
-    print(get_user_choice)
-get_user_choice()
+        def get_user_choice():
+            get_user_choice = input("What is your choice?: (rock,paper or scissors) ")  
+            print(get_user_choice)
+        get_user_choice()
 
 # Determine a winner
 
 Now that both players have made their choice, it must be decided who wins. This task will be stored in a function with two arguments, “computer choice” and “user choice”:
-def get_winner(computer_choice, user_choice):
-Using an if, elif, else block we will compare the player’s choices and determine a winner. If both the user and the computer choose the same option it will be a tie. 
- if computer_choice == user_choice:
-       print("Both players have chosen {user_choice}. It is a tie!")
+
+        def get_winner(computer_choice, user_choice):
+Using an if, elif, else block we will compare the player’s choices and determine a winner. If both the user and the computer choose the           same option it will be a tie. 
+         if computer_choice == user_choice:
+               print("Both players have chosen {user_choice}. It is a tie!")
 
 By comparing the tie condition first, I got rid of quite a few cases. This way, we can know what the computer chose with only two conditional checks of computer_choice.
 -	Next, I went over the possible scenarios in which the user could win and vice versa. In case the user chooses “rock”, and the computer chooses “scissors”, the user wins because rock smashes scissors. The computer’s choice is fixed “scissors”, alternatively, if the user chose “paper” it would have lost because, scissors cut paper. This is represented in the below code:
