@@ -11,16 +11,17 @@ The project will be created using python functions and later on using Keras imag
 
 # Computer choice
 To arbitrary generate the computer’s choices, I imported the random module:
-import random
+    import random
 
 For simplicity, this task and the following will be stored in a function that can be called when necessary.
-def get_computer_choice():
-    
-    possible_choices = ["Rock", "Paper", "Scissors"]
-    computer_choice = random.choice(possible_choices)
-    return computer_choice
 
-get_computer_choice()
+        def get_computer_choice():
+             possible_choices = ["Rock", "Paper", "Scissors"]
+             computer_choice = random.choice(possible_choices)
+             return computer_choice
+        get_computer_choice()
+
+
 
 The computer will randomly choose one of the options:
  possible_choices = ["rock", "paper", "scissors"]
