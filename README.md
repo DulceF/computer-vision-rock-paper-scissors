@@ -1,4 +1,4 @@
-# computer-vision-rock-paper-scissors
+# Rock Paper Scissors Game
 In this project I am building a "rock, paper, scissors" game. This is a hand game for two or more players. Participants say “rock, paper, scissors” and then simultaneously form their hands into the shape of a rock (a fist), a piece of paper (the palm of a hand, or a pair of scissors (two fingers extended). The rules are the following:
 •	Rock smashes scissors.
 •	Paper covers rock.
