@@ -10,8 +10,8 @@ The project will be created using python functions and later on using Keras imag
 # Building the project with python functions
 
 # Computer choice
-To arbitrary generate the computer’s choices, I imported the random module:
-    import random
+    #To arbitrary generate the computer’s choices, I imported the random module:
+        import random
 
 For simplicity, this task and the following will be stored in a function that can be called when necessary.
 
